@@ -1,0 +1,116 @@
+#1) Crear un programa que imprima por pantalla el mensaje: “Hola Mundo!”
+
+print("hola Mundo!")
+
+
+#2) Crear un programa que pida al usuario su nombre e imprima por pantalla un saludo usando el nombre ingresado. 
+# por ejemplo: si el usuario ingresa “Marcos”, el programa debe imprimir 
+# por pantalla “Hola Marcos!”. Consejo: esto será más sencillo si utilizas print(f…) para 
+# realizar la impresión por pantalla. 
+
+nombre = input("ingresa tu nombre por favor: ")
+print(f"hola, {nombre}!" )
+
+
+#3) Crear un programa que pida al usuario su nombre, apellido, edad y lugar de residencia e 
+# imprima por pantalla una oración con los datos ingresados. Por ejemplo: si el usuario ingresa 
+# “Marcos”, “Pérez”, “30” y “Argentina”, el programa debe imprimir “Soy Marcos Pérez, tengo 30 
+# años y vivo en Argentina”. Consejo: esto será más sencillo si utilizas print(f…) para realizar 
+# la impresión por pantalla.
+
+nombre = input("Por favor, ingresa tu nombre: ")
+apellido = input("Ahora ingresa tu apellido por favor: ")
+edad = input("Ingresa tu edad: ")
+Residencia = input ("Ingresa tu lugar de residencia: ")
+
+print(f"Hola soy {nombre} {apellido}, tengo {edad} años y vivo en {Residencia} ")
+
+
+#4) Crear un programa que pida al usuario el radio de un círculo e imprima por pantalla su área y su perímetro. 
+
+radio = float(input("Ingrese el radio del circulo: "))
+pi = 3.14
+area = pi * radio**2
+perimetro = 2 * pi * radio
+
+print(f"El area del circulo es:{area}")
+print(f"El perimetro del circulo es:{perimetro}")
+
+
+#5) Crear un programa que pida al usuario una cantidad de segundos e imprima por pantalla a cuántas horas equivale.
+
+segundos = int(input("Ingrese la cantidad de segundos: "))
+
+# 1 hora = 3600 segundos
+
+hora = segundos / 3600
+print(f"{segundos} segundos equivalen a {hora:} horas")
+
+#6) Crear un programa que pida al usuario un número e imprima por pantalla la tabla de 
+#multiplicar de dicho número.  
+
+numero_a_multiplicar = int(input("ingrese el numero a multiplicar:"))
+
+print(f"{numero_a_multiplicar} * 0 = {numero_a_multiplicar * 0}")
+print(f"{numero_a_multiplicar} * 1 = {numero_a_multiplicar * 1}")
+print(f"{numero_a_multiplicar} * 2 = {numero_a_multiplicar * 2}")
+print(f"{numero_a_multiplicar} * 3 = {numero_a_multiplicar * 3}")
+print(f"{numero_a_multiplicar} * 4 = {numero_a_multiplicar * 4}")
+print(f"{numero_a_multiplicar} * 5 = {numero_a_multiplicar * 5}")
+print(f"{numero_a_multiplicar} * 6 = {numero_a_multiplicar * 6}")
+print(f"{numero_a_multiplicar} * 7 = {numero_a_multiplicar * 7}")
+print(f"{numero_a_multiplicar} * 8 = {numero_a_multiplicar * 8}")
+print(f"{numero_a_multiplicar} * 9 = {numero_a_multiplicar * 9}")
+print(f"{numero_a_multiplicar} * 10 = {numero_a_multiplicar * 10}")
+
+
+#7) Crear un programa que pida al usuario dos números enteros distintos del 0 y muestre por 
+#pantalla el resultado de sumarlos, dividirlos, multiplicarlos y restarlos.
+
+numero1 = int(input("Ingresar un numero (distinto de 0):"))
+numero2 = int(input("Ingresar un segundo numero (distinto de 0):"))
+
+suma= numero1 + numero2
+division= numero1 / numero2
+multiplicacion= numero1 * numero2
+resta= numero1 - numero2
+
+print(f"suma:{suma}, division:{division}, multiplicacion:{multiplicacion}, resta:{resta}")
+
+
+#8) Crear un programa que pida al usuario su altura y su peso e imprima por pantalla su índice 
+#de masa corporal. Tener en cuenta que el índice de masa corporal se calcula del siguiente 
+#modo:
+
+altura= float(input("ingrese su altura en metros: "))
+peso= float(input("ingrese su peso en kilogramos: "))
+
+IMC= peso / (altura**2)
+
+print(f"su IMC es:{IMC:.2f}")
+
+
+#9) Crear un programa que pida al usuario una temperatura en grados Celsius e imprima por
+#pantalla su equivalente en grados Fahrenheit. Tener en cuenta la siguiente equivalencia: 
+
+Temperatura= float(input("ingrese la temperatura en grados celsius:"))
+
+fahrenheit= float((Temperatura * (9/5)) + 32)
+
+print(f"{Temperatura}°C = {fahrenheit}°F")
+
+
+#10)  Crear un programa que pida al usuario  3 números e imprima por pantalla el promedio de 
+#dichos números
+
+numero1= float(input("ingrese el primer numero:"))
+numero2= float(input("ingrese el segundo numero:"))
+numero3= float(input("ingrese el tercer numero:"))
+
+Promedio= (numero1 + numero2 + numero3) / 3
+
+print(f"El promedio es: {Promedio:.2f}")
+
+
+
+#fin
