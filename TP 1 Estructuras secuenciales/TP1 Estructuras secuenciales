@@ -35,8 +35,8 @@ pi = 3.14
 area = pi * radio**2
 perimetro = 2 * pi * radio
 
-print(f"El area del circulo es:{area}")
-print(f"El perimetro del circulo es:{perimetro}")
+print(f"El area del circulo es:{area:.2f}")
+print(f"El perimetro del circulo es:{perimetro:.2f}")
 
 
 #5) Crear un programa que pida al usuario una cantidad de segundos e imprima por pantalla a cuántas horas equivale.
