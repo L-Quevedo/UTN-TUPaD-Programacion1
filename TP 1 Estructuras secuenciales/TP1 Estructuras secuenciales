@@ -46,7 +46,7 @@ segundos = int(input("Ingrese la cantidad de segundos: "))
 # 1 hora = 3600 segundos
 
 hora = segundos / 3600
-print(f"{segundos} segundos equivalen a {hora:} horas")
+print(f"{segundos} segundos equivalen a {hora:.2f} horas")
 
 #6) Crear un programa que pida al usuario un número e imprima por pantalla la tabla de 
 #multiplicar de dicho número.  
