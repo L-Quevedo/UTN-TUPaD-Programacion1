@@ -75,8 +75,17 @@ print(f"La cantidad de palabras utilizadas es: {recuento}")
 
 alumnos = {}
 
+for _ in range(3):
+    nombre = input("Nombre del alumno: ")
+    notas = []
+    for i in range(3):
+        nota = float(input(f"Ingresá la nota {i+1} de {nombre}: "))
+        notas.append(nota)
+    alumnos[nombre] = tuple(notas)
 
-
+for alumno, notas in alumnos.items():
+    promedio = sum(notas) / len(notas)
+    print(f"{alumno} tiene un promedio de {promedio:.2f}")
 
 
 #7. Dado dos sets de números, representando dos listas de estudiantes que aprobaron Parcial 1 y Parcial 2:
@@ -125,8 +134,41 @@ print(stock_productos)
 #9. Creá una agenda donde las claves sean tuplas de (día, hora) y los valores sean eventos.
 # Permití consultar qué actividad hay en cierto día y hora.
 
+agenda = {
+    ("lunes", "10:00"): "Reunión",
+    ("martes", "15:00"): "Clase de inglés",
+    ("viernes", "18:00"): "Gimnasio"
+}
+
+dia = input("Ingresá el día: ").lower()
+hora = input("Ingresá la hora (ej: 10:00): ")
+
+clave = (dia, hora)
+
+if clave in agenda:
+    print(f"Actividad: {agenda[clave]}")
+else:
+    print("No hay actividades programadas.")
 
 
 #10. Dado un diccionario que mapea nombres de países con sus capitales, construí un nuevo diccionario donde:
 # • Las capitales sean las claves.
 # • Los países sean los valores.
+
+paises = {
+    "Argentina": "Buenos Aires",
+    "Chile": "Santiago",
+    "Brasil": "Brasilia"
+}
+
+invertido = {}
+
+for pais, capital in paises.items():
+    invertido[capital] = pais
+
+print("Diccionario original:", paises)
+print("Diccionario invertido:", invertido)
+
+
+
+#Fin
