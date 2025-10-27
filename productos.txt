@@ -1,0 +1,4 @@
+Lapicera,40,120
+Cuaderno,60,80
+Regla,34,58
+borrador,102,10
