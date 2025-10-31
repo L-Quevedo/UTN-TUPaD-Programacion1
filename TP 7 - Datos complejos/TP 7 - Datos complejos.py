@@ -30,8 +30,8 @@ print(precios_frutas)
 #3. Siguiendo con el diccionario precios_frutas que resulta luego de ejecutar el código desarrollado en el punto anterior, 
 # crear una lista que contenga únicamente las frutas sin los precios.
 
-print(precios_frutas.keys())
-
+lista_frutas = list(precios_frutas.keys())
+print(lista_frutas)
 
 #4. Escribí un programa que permita almacenar y consultar números telefónicos.
 # • Permití al usuario cargar 5 contactos con su nombre como clave y número como valor.
@@ -105,29 +105,36 @@ print(f"Los alumnos que aprobaron solo uno de los parciales son: {solo_uno_de_lo
 print(f"Los alumnos que aprobaron al menos un parcial son: {ambos_parciales}")
 
 
-#8. Armá un diccionario donde las claves sean nombres de productos y los valores su stock. Permití al usuario:
-# • Consultar el stock de un producto ingresado.
-# • Agregar unidades al stock si el producto ya existe.
-# • Agregar un nuevo producto si no existe.
+# 8. Arma un diccionario donde las claves sean nombres de productos y los valores su stock.
+# Permitir al usuario:
+# * Consultar el stock de un producto ingresado.
+# * Agregar unidades al stock si el producto ya existe.
+# * Agregar un nuevo producto si no existe.
 
-stock_productos = {"harina":10,"manteca":8,"yerba":24,"gaseosa":20,"azucar":3,"aceite":2,"leche":5,"jabon":1}
+# 8. Arma un diccionario donde las claves sean nombres de productos y los valores su stock.
+# Permitir al usuario:
+# * Consultar el stock de un producto ingresado.
+# * Agregar unidades al stock si el producto ya existe.
+# * Agregar un nuevo producto si no existe.
 
-print(f"Stock de productos {stock_productos}")
+stock_productos = {"harina": 10, "manteca": 8, "yerba": 24, "gaseosa": 20, "azucar": 3, "aceite": 2, "leche": 5, "jabon": 1}
 
-producto = input("Ingrese el nombre del producto: ")
+print(f"Stock de productos inicial: {stock_productos}")
 
-for producto in stock_productos:
-    print(f"Stock actual de {producto}: {stock_productos[producto]}")
-    agregar = int(input("Cuantas unidades desea agregar al stock?"))
+producto = input("Ingrese el nombre del producto: ").lower()
+
+if producto in stock_productos:
+    print(f"Stock actual de {producto}: {stock_productos[producto]} unidades")
+    agregar = int(input("¿Cuántas unidades desea agregar al stock?: "))
     stock_productos[producto] += agregar
-    print(f"El nuevo stock de {producto}: {stock_productos}")
+    print(f"El nuevo stock de {producto} es: {stock_productos[producto]} unidades.")
 else:
-    print(f"{producto} no existe en el inventario")
-    nuevo_stock = int(input("Ingrse el stock inicial para este produto: "))
+    print(f"El producto '{producto}' no existe en el inventario.")
+    nuevo_stock = int(input("Ingrese el stock inicial para este producto: "))
     stock_productos[producto] = nuevo_stock
-    print(f"{producto} agregado con {nuevo_stock} unidades")
+    print(f"'{producto}' agregado con {nuevo_stock} unidades.")
 
-print("Stock actualizado")
+print("\nStock actualizado")
 print(stock_productos)
 
 
