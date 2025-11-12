@@ -1,10 +1,10 @@
 ﻿nombre,población,superficie,continente
-Argentina,46000000,2780000,América
-Brasil,214000000,8516000,América
-Estados Unidos,333000000,9834000,América
-Canadá,39000000,9985000,América
-México,126000000,1964000,América
-Colombia,52000000,1142000,América
+Argentina,46000000,2780000,America
+Brasil,214000000,8516000,America
+Estados Unidos,333000000,9834000,America
+Canadá,39000000,9985000,America
+México,126000000,1964000,America
+Colombia,52000000,1142000,America
 España,48000000,505000,Europa
 Francia,65000000,551000,Europa
 Alemania,84000000,357000,Europa
@@ -17,15 +17,15 @@ Japón,124000000,378000,Asia
 Corea del Sur,52000000,100000,Asia
 Indonesia,275000000,1905000,Asia
 Arabia Saudita,36000000,2149000,Asia
-Egipto,112000000,1002000,África
-Sudáfrica,60000000,1221000,África
-Nigeria,220000000,923000,África
-Etiopía,120000000,1104000,África
-Kenia,55000000,580000,África
-Marruecos,37000000,447000,África
-Australia,26000000,7692000,Oceanía
-Nueva Zelanda,5100000,268000,Oceanía
-Papúa Nueva Guinea,9500000,462000,Oceanía
-Fiyi,930000,18300,Oceanía
-Samoa,220000,2840,Oceanía
-Tonga,106000,750,Oceanía
+Egipto,112000000,1002000,Africa
+SudAfrica,60000000,1221000,Africa
+Nigeria,220000000,923000,Africa
+Etiopía,120000000,1104000,Africa
+Kenia,55000000,580000,Africa
+Marruecos,37000000,447000,Africa
+Australia,26000000,7692000,Oceania
+Nueva Zelanda,5100000,268000,Oceania
+Papúa Nueva Guinea,9500000,462000,Oceania
+Fiyi,930000,18300,Oceania
+Samoa,220000,2840,Oceania
+Tonga,106000,750,Oceania
