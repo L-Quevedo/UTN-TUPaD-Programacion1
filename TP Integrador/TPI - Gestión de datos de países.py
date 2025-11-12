@@ -11,32 +11,32 @@ from pathlib import Path
 # Función para cargar los datos en la lista de países
 def cargar_datos_csv(ruta_archivo):
     lista_paises = []
-    try:
-        with open(ruta_archivo, "r", encoding="iso-8859-1") as archivo:
-            
-            # usamos esta linea para saltear los encabezados y que el codigo no indique error
-            archivo.readline() 
-
-            for linea in archivo:
-                linea = linea.strip()
-                campos = linea.split(",")
-
-                if len(campos) == 4:
-                    try:
-                        pais = {"nombre": campos[0].strip(),
-                                "poblacion": int(campos[1].strip()),
-                                "superficie": int(campos[2].strip()),
-                                "continente": campos[3].strip()}
-                        lista_paises.append(pais)
-                    except ValueError:
-                        print(f"Error de formato (tipos de datos) en línea: {linea}. No se cargó.")
-            
-            print(f"Se han cargado {len(lista_paises)} países exitosamente.")
-            return lista_paises
-    
-    except FileNotFoundError:
-        print(f"Error, el archivo en '{ruta_archivo}' no fue encontrado, verifique la ruta.")
+    if not os.path.isfile(ruta_archivo):
+        print(f"Error, el archivo en '{ruta_archivo}' no fue encontrado, verifique la ruta")
         return []
+    with open(ruta_archivo, "r", encoding="iso-8859-1") as archivo:
+# usamos esta linea para saltear los encabezados y que el codigo no indique error
+        archivo.readline() 
+
+        for linea in archivo:
+            linea = linea.strip()
+            campos = linea.split(",")
+
+            if len(campos) == 4:
+                poblacion_str = campos[1].strip()
+                superficie_str = campos[2].strip()
+                if poblacion_str.isdigit() and superficie_str.isdigit():
+                    pais = {"nombre": campos[0].strip(),
+                            "poblacion": int(poblacion_str),
+                            "superficie": int(superficie_str),
+                            "continente": campos[3].strip()}
+                    lista_paises.append(pais)
+                else:
+                    print(f"Error de formato (tipos de datos) en línea: {linea}. No se cargó.")
+            
+        print(f"Se han cargado {len(lista_paises)} países exitosamente.")
+        return lista_paises
+
 
 # Ahora creamos la función que ejecuta la aplicación y el menu de opciones
 def mostrar_menu():
@@ -90,7 +90,7 @@ def main():
 
     # Corrección para que siempre encuentre el CSV
     carpeta_del_script = Path(__file__).parent
-    nombre_archivo_completo = carpeta_del_script / "dataset.csv"
+    nombre_archivo_completo = str(carpeta_del_script / "dataset.csv")
 
     PAISES = cargar_datos_csv(nombre_archivo_completo)
 
@@ -130,13 +130,13 @@ def pedir_entero(mensaje):
             print("El campo no puede estar vacío")
             continue
 
-        try:
+        if valor_str.isdigit():
             valor = int(valor_str)
             if valor >=0:
                 return valor
             else:
                 print("El valor debe ser un número entero positivo o 0")
-        except ValueError:
+        else:
             print("Entrada inválida, por favor ingrese un número valido")
 
 
