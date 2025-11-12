@@ -1,6 +1,6 @@
 # TPI - Gestión de datos de países
 
-# Profesores: Virginia Cimino,
+# Profesores: Cortéz Alberto
 # Alumnos: Quevedo Lucas, Aramburu Juan
 # Grupo: 58
 
